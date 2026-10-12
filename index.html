@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>بازی دوز</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- دکمه‌های بالای صفحه: تم، صدا، زبان، پشتیبانی، راهنما -->
+    <div id="top-bar">
+        <button id="theme-toggle" data-i18n-title="tipTheme">🌙</button>
+        <button id="sound-toggle" data-i18n-title="tipSound">🔊</button>
+        <button id="lang-toggle" data-i18n-title="tipLang">EN</button>
+        <button id="support-button" data-i18n-title="tipSupport">📧</button>
+        <button id="help-button" data-i18n-title="tipHelp">؟</button>
+    </div>
+
+    <h1 data-i18n="title">بازی دوز</h1>
+
+    <!-- منوی انتخاب حالت بازی -->
+    <div id="mode-menu">
+        <p data-i18n="modeQuestion">چطوری می‌خوای بازی کنی؟</p>
+        <button id="modeTwo" data-i18n="modeTwo">👥 دو نفره</button>
+        <button id="modeBot" data-i18n="modeBot">🤖 تک نفره (با بات)</button>
+    </div>
+
+    <!-- منوی سطح سختی (فقط در حالت تک نفره) -->
+    <div id="difficulty-menu" class="hidden">
+        <p data-i18n="levelQuestion">سطح بات رو انتخاب کن:</p>
+        <button class="level-btn" data-level="easy" data-i18n="easy">آسون</button>
+        <button class="level-btn" data-level="medium" data-i18n="medium">متوسط</button>
+        <button class="level-btn" data-level="hard" data-i18n="hard">سخت</button>
+    </div>
+
+    <!-- انتخاب مهره‌ی انسان (فقط در حالت تک نفره) -->
+    <div id="side-menu" class="hidden">
+        <p data-i18n="sideQuestion">با کدوم مهره بازی می‌کنی؟</p>
+        <button class="side-btn" data-side="X">X</button>
+        <button class="side-btn" data-side="O">O</button>
+    </div>
+
+    <!-- امتیازشمار -->
+    <div id="scoreboard" class="hidden">
+        <div class="score-item score-x">
+            <span id="label-x">X</span>
+            <strong id="score-x">0</strong>
+        </div>
+        <div class="score-item">
+            <span data-i18n="draw">مساوی</span>
+            <strong id="score-draw">0</strong>
+        </div>
+        <div class="score-item score-o">
+            <span id="label-o">O</span>
+            <strong id="score-o">0</strong>
+        </div>
+    </div>
+
+    <p id="winner"></p>
+
+    <div id="board">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+
+    <p id="turn">نوبت: X</p>
+    <p id="move-info"></p>
+
+    <!-- انتخاب شروع‌کننده‌ی دست اول: دکمه‌ها بالا، متن زیرشون -->
+    <div id="start-panel" class="hidden">
+        <div id="start-buttons">
+            <button id="startX">X</button>
+            <button id="startO">O</button>
+        </div>
+        <p id="start-title" data-i18n="startTitle">دست اول کی شروع کنه؟</p>
+    </div>
+
+    <button id="restart" data-i18n="restart">↻ بازی جدید</button>
+    <button id="menu-btn" data-i18n="menu">☰ منوی اصلی</button>
+
+    <!-- پنجره‌ی راهنما -->
+    <div id="rules-overlay" class="overlay hidden">
+        <div class="overlay-card">
+            <h2 data-i18n="rulesTitle">📖 راهنمای بازی</h2>
+            <ol>
+                <li data-i18n="rules1"></li>
+                <li data-i18n="rules2"></li>
+                <li data-i18n="rules3"></li>
+                <li data-i18n="rules4"></li>
+                <li data-i18n="rules5"></li>
+            </ol>
+            <button id="rules-close" data-i18n="gotIt">فهمیدم</button>
+        </div>
+    </div>
+
+    <!-- پنجره‌ی پشتیبانی -->
+    <div id="support-overlay" class="overlay hidden">
+        <div class="overlay-card">
+            <h2 data-i18n="supportTitle">📧 پشتیبانی</h2>
+            <p data-i18n="supportText"></p>
+            <a id="support-link" class="mail-link" dir="ltr" href="#"></a>
+            <div class="overlay-actions">
+                <button id="copy-email" data-i18n="copyEmail">کپی ایمیل</button>
+                <button id="support-close" data-i18n="close">بستن</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- لینک صفحه‌های درباره‌ی ما و حریم خصوصی -->
+    <footer id="site-footer">
+        <a href="about.html" data-i18n="footerAbout">درباره‌ی ما</a>
+        <span>·</span>
+        <a href="privacy.html" data-i18n="footerPrivacy">حریم خصوصی</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
