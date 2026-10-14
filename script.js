@@ -63,6 +63,11 @@ const translations = {
         title: "بازی دوز",
         modeQuestion: "چطوری می‌خوای بازی کنی؟",
         modeTwo: "👥 دو نفره",
+        tagline: "بازی دوز · ساده، جذاب، بی‌پایان!",
+        modeTwoT: "بازی دونفره",
+        modeTwoS: "با دوستت رقابت کن!",
+        modeBotT: "بازی با بات",
+        modeBotS: "مهارت خودت رو محک بزن!",
         modeBot: "🤖 تک نفره (با بات)",
         levelQuestion: "سطح بات رو انتخاب کن:",
         easy: "آسون",
@@ -108,6 +113,11 @@ const translations = {
         title: "Tic-Tac-Toe",
         modeQuestion: "How do you want to play?",
         modeTwo: "👥 Two players",
+        tagline: "Tic-Tac-Toe · Simple, addictive, endless!",
+        modeTwoT: "Two players",
+        modeTwoS: "Challenge a friend!",
+        modeBotT: "Play vs bot",
+        modeBotS: "Test your skills!",
         modeBot: "🤖 Single player (vs bot)",
         levelQuestion: "Choose the bot level:",
         easy: "Easy",
@@ -894,4 +904,4 @@ try {
 } catch (e) {}
 
 render(null);
-setLanguage(savedLang);
+setLanguage(savedLang)
