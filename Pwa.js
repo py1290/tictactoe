@@ -1,0 +1,6 @@
+// ثبت service worker (برای نصب شدن سایت به شکل اپ)
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("service-worker.js").catch(function () {});
+  });
+}
