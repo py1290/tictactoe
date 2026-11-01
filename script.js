@@ -108,6 +108,7 @@ const translations = {
         tipHelp: "راهنما",
         footerAbout: "درباره‌ی ما",
         footerPrivacy: "حریم خصوصی",
+                donate: "☕ حمایت مالی از بازی",
     },
     en: {
         title: "Tic-Tac-Toe",
@@ -158,6 +159,7 @@ const translations = {
         tipHelp: "Help",
         footerAbout: "About",
         footerPrivacy: "Privacy Policy",
+                donate: "☕ Support the game",
     },
 };
 
