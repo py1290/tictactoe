@@ -671,3 +671,20 @@ body .overlay-card button:hover {
 @media (prefers-reduced-motion: reduce) {
     body * { animation: none !important; transition: none !important; }
 }
+.donate-btn {
+  display: block;
+  margin: 14px auto 6px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #f59e0b, #fb7185);
+  box-shadow: 0 6px 18px rgba(251, 113, 133, 0.45);
+  transition: transform 0.15s ease, filter 0.2s ease;
+}
+.donate-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
