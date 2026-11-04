@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://py1290.github.io/tictactoe/sitemap.xml
