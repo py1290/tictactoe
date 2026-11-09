@@ -1,7 +1,7 @@
 /* ===== Board + pieces styled like the reference image =====
    Needs these 3 images next to index.html:
    cell-empty.jpg, cell-x.jpg, cell-o.jpg
-   Load AFTER neon-theme.css:
+   Load AFTER neon-theme.css: 
    <link rel="stylesheet" href="neon-3d.css">
 */
 
