@@ -101,3 +101,62 @@ body.light #board button.winning-cell {
     body #board button,
     body.light #board button { border-radius: 14px; }
 }
+
+/* ===== Smoothness / lag fixes ===== */
+
+/* the game redraws every cell after each move, which made the pop-in
+   animation replay on ALL pieces (flicker). Turn animations off on the board. */
+body #board button,
+body #board button.x-piece,
+body #board button.o-piece,
+body #board button.winning-cell,
+body.light #board button.winning-cell {
+    animation: none !important;
+}
+
+/* only animate cheap properties */
+body #board button {
+    transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;   /* removes the tap delay on phones */
+    user-select: none;
+    -webkit-user-select: none;
+}
+/* lighter glow on small screens */
+@media (max-width: 600px) {
+    body #board,
+    body.light #board {
+        box-shadow:
+            inset 0 0 20px rgba(0, 0, 0, 0.6),
+            -4px -4px 16px rgba(59, 130, 246, 0.22),
+            6px 8px 18px rgba(239, 68, 68, 0.22);
+    }
+}
+
+/* ===== Light-theme fix =====
+   In light mode the generic hover rule was stronger than the piece rules,
+   so a piece's picture disappeared when you hovered/tapped it. */
+body.light #board button.x-piece:hover:not(:disabled),
+body.light #board button.x-piece:hover,
+body.light #board button.x-piece:disabled,
+body.light #board button.x-piece:disabled:hover {
+    background: #0b1330 url("cell-x.jpg") center / 112% 112% no-repeat !important;
+    color: transparent;
+    text-shadow: none;
+}
+body.light #board button.o-piece:hover:not(:disabled),
+body.light #board button.o-piece:hover,
+body.light #board button.o-piece:disabled,
+body.light #board button.o-piece:disabled:hover {
+    background: #170d14 url("cell-o.jpg") center / 112% 112% no-repeat !important;
+    color: transparent;
+    text-shadow: none;
+}
+/* empty cells stay dark in light mode too */
+body.light #board button:not(.x-piece):not(.o-piece),
+body.light #board button:not(.x-piece):not(.o-piece):disabled {
+    background: #0e1424 url("cell-empty.jpg") center / 112% 112% no-repeat;
+}
+body.light #board button.winning-cell {
+    background-color: transparent;
+}
